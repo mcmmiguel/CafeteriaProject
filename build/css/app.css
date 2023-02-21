@@ -1,7 +1,12 @@
-body {
-  background-color: black;
+.header {
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  color: green;
+.nav {
+  background-color: blue;
+}
+
+body {
+  background-color: black;
 }

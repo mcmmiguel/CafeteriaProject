@@ -1,10 +1,9 @@
+@use 'header/header';
+@use 'header/navegacion.scss';
+
 $color: black;
 $color2: green;
 
 body {
     background-color: $color;
 }
-
-h1 {
-    color: $color2;
-}   
