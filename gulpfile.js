@@ -9,7 +9,7 @@ function css(  done ) {
     // Paso 1: Identificar archivo, 2. Compilarla, 3. Guardar el .css
 
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass(  {outputStyle: 'expanded'}  ) )
             .pipe( dest('build/css') )
 
     done();
