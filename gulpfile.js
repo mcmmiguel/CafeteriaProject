@@ -13,18 +13,27 @@ function css(  done ) {
     src('src/scss/app.scss')
         .pipe( sass(  ) )
             .pipe(postcss([autoprefixer () ] ) )  //Para crear codigo que será soportado por otros navegadores
-            .pipe( dest('build/css') )
+            .pipe( dest('build/css') );
 
     done();
 }
 
-function dev() {
-    watch( 'src/scss/**/*.scss', css )  //Para tener monitoreada toda la carpeta
+function imagenes() {
+    return src( 'src/img/**/*' )
+        .pipe( dest( 'build/img' ) );
 }
+
+function dev() {
+    watch( 'src/scss/**/*.scss', css );  //Para tener monitoreada toda la carpeta
+    watch( 'src/img/**/*', imagenes );
+}
+
+
 
 exports.css = css; 
 exports.dev = dev;
-exports.default = series(  css, dev );
+exports.imagenes = imagenes;
+exports.default = series(  imagenes, css, dev );
 
 
 // Series - Se inicia una tarea y hasta que finaliza inicia la siguiente
