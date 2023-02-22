@@ -3,10 +3,11 @@
 
 .contenido-principal {
     background-color: v.$blanco;
-    padding: 2rem;
-    margin-top: -10rem;
-    position: relative;
+    padding: 5rem 2rem;
+
     @include m.tablet { 
         padding: 10rem;
+        margin-top: -10rem;
+        position: relative;
     }
 }
