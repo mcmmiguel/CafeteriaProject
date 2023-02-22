@@ -319,11 +319,13 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #EBE7DE;
 }
 
 p {
   color: #000000;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 .contenedor {
@@ -455,5 +457,17 @@ h3 {
   .barra .logo {
     width: 20rem;
     margin: 0;
+  }
+}
+
+.contenido-principal {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin-top: -10rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    padding: 10rem;
   }
 }
