@@ -1,3 +1,28 @@
+@use 'base/variables' as v;
+
 .header {
-    color: black;
+    padding: 5rem 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: v.$negro;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .6;
+    }
+
+    .contenido-header {
+        margin-top: 5rem;
+        position: relative;
+    }
+}
+
+
+// HEADER DE CADA PAGINA
+.header-inicio {
+    background-image: url(../../../build/img/header_inicio.jpg);
 }
