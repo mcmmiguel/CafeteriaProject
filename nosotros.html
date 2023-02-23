@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <header class="header header-inicio">
+    <header class="header header-nosotros">
         <div class="contenido-header contenedor">
             <div class="barra">
                 <div class="logo">
@@ -19,8 +19,8 @@
                 </div>
 
                 <nav class="nav-principal">
-                    <a class="activo" href="index.html">Inicio</a>
-                    <a href="nosotros.html">Nosotros</a>
+                    <a href="index.html">Inicio</a>
+                    <a class="activo" href="nosotros.html">Nosotros</a>
                     <a href="proceso.html">Proceso</a>
                     <a href="menu.html">Menú</a>
                     <a href="galeria.html">Galeria</a>
@@ -29,16 +29,37 @@
             </div>
 
             <div class="texto-header">
-                <h1>Disfruta una deliciosa taza de café</h1>
+                <h1>Una nueva experiencia cada día</h1>
             </div>
         </div>
     </header>
 
     <main class="contenedor contenido-principal text-center">
-      
+      <h2><span>Conoce más</span> sobre nosotros</h2>
 
-
+        <div class="contenido-nosotros">
+            <picture>
+                <source 
+                    srcset="build/img/nosotros_sidebar.avif"
+                    type="image/avif">
+                <source 
+                    srcset="build/img/nosotros_sidebar.webp" 
+                    type="image/webp">
+                <source 
+                    srcset="build/img/nosotros_sidebar.avif" 
+                    type="image/jpeg">
+                <img loading="lazy" decoding="async" src="img/imagen.jpg" lazyalt="imagen" width="500" height="300">
+            </picture>
+        </div>
         
+        <div class="texto">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorum magni excepturi, molestias explicabo voluptate officia saepe, praesentium rerum non ab accusantium laboriosam, veniam consequatur aliquid ex? Possimus, nam commodi.</p>
+
+            <blockquote>¡Excelente sabor!</blockquote>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorum magni excepturi, molestias explicabo voluptate officia saepe, praesentium rerum non ab accusantium laboriosam, veniam consequatur aliquid ex? Possimus, nam commodi.</p>
+
+        </div>
     </main>
     
     <footer class="footer">

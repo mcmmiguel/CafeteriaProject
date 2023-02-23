@@ -342,6 +342,7 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 ul {
@@ -449,6 +450,10 @@ h3 {
 
 .header-inicio {
   background-image: url(../../../build/img/header_inicio.jpg);
+}
+
+.header-nosotros {
+  background-image: url(../../../build/img/header_nosotros.jpg);
 }
 
 .nav-principal {
