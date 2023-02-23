@@ -1,10 +1,14 @@
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .iconos {
     margin-top: 5rem;
 
     .listado-iconos {        
-        
+        @include m.tablet { 
+            @include m.grid(3, 5rem);
+        }
+
         li {
             img {
                 width: 12rem;
