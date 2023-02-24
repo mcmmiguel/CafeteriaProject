@@ -7,6 +7,8 @@ const { src, dest, watch, series} = require('gulp');   //Las llaves después de 
 const sass = require('gulp-sass')(require('sass')); //gulp-sass solo compila esa hoja de estilos
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano')
 
 //GRUPO IMAGENES 
 const imagemin = require('gulp-imagemin');
@@ -17,10 +19,14 @@ function css(  done ) {
     // Compilar pasos
     // Paso 1: Identificar archivo, 2. Compilarla, 3. Guardar el .css
 
+    
+
     src('src/scss/app.scss')
-        .pipe( sass(  ) )
-            .pipe(postcss([autoprefixer () ] ) )  //Para crear codigo que será soportado por otros navegadores
-            .pipe( dest('build/css') );
+    .pipe( sourcemaps.init() )
+        .pipe( sass() )
+        .pipe( postcss([ autoprefixer(), cssnano() ]) ) //Para crear codigo que será soportado por otros navegadores
+        .pipe( sourcemaps.write('.'))
+        .pipe( dest('build/css') )
 
     done();
 }

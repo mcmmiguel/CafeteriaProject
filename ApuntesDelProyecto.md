@@ -7,3 +7,4 @@ npm i --save-dev gulp-webp *Dependencia para convertir y crear imagenes a format
 
 npm i --save-dev gulp-avif *Dependencia para convertir y crear imagenes a fomrato avif*
 
+npm i --save-dev gulp-sourcemaps *Dependencia de sorcemap*
